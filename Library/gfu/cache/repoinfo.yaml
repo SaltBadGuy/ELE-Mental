@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-05-26T18:17:32.173+01:00
-  initializedAtString: 2019-05-26T17:56:36.412+01:00
+  lastUpdatedAtString: 2019-06-09T16:06:21.986+01:00
+  initializedAtString: 2019-06-09T16:06:21.986+01:00
   currentGitRemote:
     name: origin
     url: https://github.com/SaltBadGuy/ELE-Mental
@@ -24,14 +24,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: TestBranchForCommit
-    tracking: origin/TestBranchForCommit
+    name: master
+    tracking: origin/master
   currentConfigBranch:
-    name: TestBranchForCommit
+    name: master
     remote:
       name: origin
       url: https://github.com/SaltBadGuy/ELE-Mental
-    trackingBranch: TestBranchForCommit
+    trackingBranch: master
   currentConfigRemote:
     name: origin
     url: https://github.com/SaltBadGuy/ELE-Mental
