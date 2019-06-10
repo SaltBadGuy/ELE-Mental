@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97045120884957506}
-  - component: {fileID: 9120544635103419635}
   - component: {fileID: 1858564213059729954}
   m_Layer: 0
   m_Name: Arms
@@ -113,25 +112,6 @@ Transform:
   m_Father: {fileID: 7647661291921583106}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &9120544635103419635
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774009648975534554}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72f75299f18179641867f4a46a264b99, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1858564213059729954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,9 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683ff842fafee934482e19e24d53aa68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LAAnimCon: {fileID: 9120544635103419635}
-  RAAnimCon: {fileID: 0}
+  Anim: {fileID: 0}
   PCS: {fileID: 7647661291921583108}
+  PCSH: {fileID: 0}
 --- !u!1 &4480472908091682424
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +173,8 @@ GameObject:
   - component: {fileID: 7647661291921583111}
   - component: {fileID: 7647661291921583108}
   - component: {fileID: 7246723067854468348}
+  - component: {fileID: 574136015}
+  - component: {fileID: 574136020}
   m_Layer: 0
   m_Name: Player Character
   m_TagString: Untagged
@@ -367,7 +349,7 @@ Animator:
   m_GameObject: {fileID: 7647661291921583105}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43e98ad345287244dbdced40ab2315d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -376,6 +358,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &574136015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647661291921583105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e90870c9b15c4445b2f8fd701c96aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anim: {fileID: 7246723067854468348}
+  PCS: {fileID: 7647661291921583108}
+  PCSH: {fileID: 7647661291921583111}
+--- !u!114 &574136020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647661291921583105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6f25259f870e149bb24937e2461ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FaceAnimCon: {fileID: 7246723067854468348}
+  PCS: {fileID: 7647661291921583108}
 --- !u!1 &7647661291996297596
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +587,7 @@ Animator:
   m_GameObject: {fileID: 7647661292936956214}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72f75299f18179641867f4a46a264b99, type: 2}
+  m_Controller: {fileID: 9100000, guid: a1d16f8574dec11438300f338896224e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -753,9 +764,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7647661293109456388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ae4946777550d848923aa70f6544213, type: 2}
+  m_Controller: {fileID: 9100000, guid: 43e98ad345287244dbdced40ab2315d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -771,12 +782,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7647661293109456388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6f25259f870e149bb24937e2461ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FaceAnimCon: {fileID: 7647661293109456393}
+  FaceAnimCon: {fileID: 7246723067854468348}
   PCS: {fileID: 7647661291921583108}
 --- !u!1 &7647661293167784273
 GameObject:
@@ -947,7 +958,7 @@ Animator:
   m_GameObject: {fileID: 7647661293626139292}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72f75299f18179641867f4a46a264b99, type: 2}
+  m_Controller: {fileID: 9100000, guid: a1d16f8574dec11438300f338896224e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -966,7 +977,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6038873152693053012}
   - component: {fileID: 6347695085529040556}
-  - component: {fileID: 6178671834922040903}
   m_Layer: 0
   m_Name: FireSpark
   m_TagString: Untagged
@@ -1036,22 +1046,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6178671834922040903
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752055027770607987}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 71175e9f694fcc245918ab1094c9a434, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

@@ -79,9 +79,8 @@ public class PlayerShoot : MonoBehaviour
                         FireCD = RateOfFire;
                         GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
                         Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
-                        GameObject WandSparkObj = Instantiate(ProjSpark, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
-                        WandSparkObj.GetComponent<PartTrack>().TargetObj = ProjSpawn;
-                        
+                        //GameObject WandSparkObj = Instantiate(ProjSpark, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
+                        //WandSparkObj.GetComponent<PartTrack>().TargetObj = ProjSpawn;
                         //Projectile.GetComponent<Bullet>().DamageDealt = DamageDealt;
                         Destroy(Projectile, 5f);
                     }
