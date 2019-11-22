@@ -16,10 +16,10 @@ TagManager:
   - 
   - PostProcessing
   - Wall
-  - 
-  - 
-  - 
-  - 
+  - PlayerPrj
+  - EnemyPrj
+  - Player
+  - Enemy
   - 
   - 
   - 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6579502719906428752}
   - component: {fileID: 4222044674353903633}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +45,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -56,6 +57,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -90,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8896958963843746468}
   - component: {fileID: 8154725106928688700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: OuterLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +127,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -136,6 +139,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -170,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2418380715235861213}
   - component: {fileID: 6021115923118816892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,6 +209,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -216,6 +221,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -254,7 +260,7 @@ GameObject:
   - component: {fileID: 98343112605613472}
   - component: {fileID: 2961549122446661051}
   - component: {fileID: 3620050212893394165}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerFirePrj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2919612428529937744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6579502719906428752}
@@ -292,6 +298,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -303,6 +310,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -360,13 +368,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageDealt: 100
-  ProjVel: 0.7
+  ProjVel: 2
   SmokeTrail: {fileID: 63574759574550415, guid: ecdecb2fd706a0b4488e3f786180bee5,
     type: 3}
   SmokeTrailF: 0
+  SmokeTrailCDMin: 10
+  SmokeTrailCDMax: 20
   EmberTrail: {fileID: 7496913366913713357, guid: 1ee0953ed76956b488064a51f76177be,
     type: 3}
   EmberTrailF: 0
+  EmberTrailCDMin: 10
+  EmberTrailCDMax: 20
   Explosion: {fileID: 7004121953131528669, guid: fecacea8fc3152e4a8a3a0c2f438fbe8,
     type: 3}
 --- !u!95 &2961549122446661051

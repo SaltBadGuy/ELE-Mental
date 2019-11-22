@@ -71,11 +71,9 @@ public class PlayerMovement : MonoBehaviour
             // If it hits a wall, then we need to adjust the movement so that the character won't go inside the wall.
             if (hit.collider.tag == "Wall")
             {
-                Debug.Log(gameObject.name + "attempted to move into a wall, correcting.");
+                Debug.Log(gameObject.name + "attempted to move into a wall, correcting. Hit point is " + hit.point.x + ", " + hit.point.y);
 
                 //For the x value...
-
-                Debug.Log("Hit at X coord " + hit.point.x);
 
                 //If we're moving left into the wall...
                 if (NewPos.x < hit.point.x)
@@ -90,8 +88,6 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 //For the y value...
-
-                Debug.Log("Hit at Y coord " + hit.point.y);
 
                 //If the character is moving up into the wall...
                 if (NewPos.y < hit.point.y)
