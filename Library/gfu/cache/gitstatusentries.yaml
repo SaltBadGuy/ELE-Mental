@@ -13,573 +13,586 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2019-11-20T17:32:53.109+00:00
-  initializedAtString: 2019-11-20T14:49:37.698+00:00
+  lastUpdatedAtString: 2020-03-30T09:04:11.651+01:00
+  initializedAtString: 2020-03-30T09:04:09.231+01:00
   entries:
   - path: .vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\.vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\.vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide
     projectPath: .vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: .vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-shm
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\.vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-shm
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\.vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-shm
     projectPath: .vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-shm
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: .vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-wal
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\.vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-wal
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\.vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-wal
     projectPath: .vs\ELE-MENTAL GitHub\v15\Server\sqlite3\storage.ide-wal
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Assembly-CSharp.csproj
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assembly-CSharp.csproj
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assembly-CSharp.csproj
     projectPath: Assembly-CSharp.csproj
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\Aesprite\RockEnemy01-Recovered.aseprite
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Aesprite\RockEnemy01-Recovered.aseprite
-    projectPath: Assets\Aesprite\RockEnemy01-Recovered.aseprite
+  - path: Assembly-CSharp-Editor.csproj
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assembly-CSharp-Editor.csproj
+    projectPath: Assembly-CSharp-Editor.csproj
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assets\Aesprite\EarthGlow.aseprite
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Aesprite\EarthGlow.aseprite
+    projectPath: Assets\Aesprite\EarthGlow.aseprite
+    originalPath: 
+    status: 4
+    staged: 1
+  - path: Assets\Aesprite\EarthGlow.aseprite.meta
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Aesprite\EarthGlow.aseprite.meta
+    projectPath: Assets\Aesprite\EarthGlow.aseprite.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Aesprite\EarthPrj01.aseprite
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Aesprite\EarthPrj01.aseprite
+    projectPath: Assets\Aesprite\EarthPrj01.aseprite
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assets\Aesprite\EarthPrj01.png
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Aesprite\EarthPrj01.png
+    projectPath: Assets\Aesprite\EarthPrj01.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Aesprite\EarthPrj01.png.meta
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Aesprite\EarthPrj01.png.meta
+    projectPath: Assets\Aesprite\EarthPrj01.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Aesprite\PlayerCharacterNew.aseprite
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Aesprite\PlayerCharacterNew.aseprite
+    projectPath: Assets\Aesprite\PlayerCharacterNew.aseprite
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assets\Animations\Backups\Arms.controller
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\Backups\Arms.controller
+    projectPath: Assets\Animations\Backups\Arms.controller
     originalPath: 
     status: 3
     staged: 0
   - path: Assets\Animations\Backups\Blink.anim
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Animations\Backups\Blink.anim
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\Backups\Blink.anim
     projectPath: Assets\Animations\Backups\Blink.anim
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\Animations\FireIdle.anim
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Animations\FireIdle.anim
-    projectPath: Assets\Animations\FireIdle.anim
+  - path: Assets\Animations\Backups\Idle.anim
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\Backups\Idle.anim
+    projectPath: Assets\Animations\Backups\Idle.anim
     originalPath: 
     status: 3
     staged: 0
+  - path: Assets\Animations\LegIdle.anim
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\LegIdle.anim
+    projectPath: Assets\Animations\LegIdle.anim
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Animations\LegIdle.anim.meta
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\LegIdle.anim.meta
+    projectPath: Assets\Animations\LegIdle.anim.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Animations\PCAnim.controller
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\PCAnim.controller
+    projectPath: Assets\Animations\PCAnim.controller
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assets\Animations\WalkCycle.anim
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\WalkCycle.anim
+    projectPath: Assets\Animations\WalkCycle.anim
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Animations\WalkCycle.anim.meta
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Animations\WalkCycle.anim.meta
+    projectPath: Assets\Animations\WalkCycle.anim.meta
+    originalPath: 
+    status: 1
+    staged: 0
   - path: Assets\AnimEffects.cs
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\AnimEffects.cs
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\AnimEffects.cs
     projectPath: Assets\AnimEffects.cs
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\AnimEffects.cs.meta
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\AnimEffects.cs.meta
-    projectPath: Assets\AnimEffects.cs.meta
-    originalPath: 
-    status: 1
-    staged: 0
+    status: 3
+    staged: 1
   - path: Assets\Art Assets\Player\Player Character.prefab
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Art Assets\Player\Player
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Art Assets\Player\Player
       Character.prefab
     projectPath: Assets\Art Assets\Player\Player Character.prefab
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\Art Assets\Player\Projectiles\PCFirePrjExplosion.prefab
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Art Assets\Player\Projectiles\PCFirePrjExplosion.prefab
-    projectPath: Assets\Art Assets\Player\Projectiles\PCFirePrjExplosion.prefab
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Art Assets\Player\Projectiles\PlayerFireEmber.prefab
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Art Assets\Player\Projectiles\PlayerFireEmber.prefab
-    projectPath: Assets\Art Assets\Player\Projectiles\PlayerFireEmber.prefab
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Art Assets\Player\Projectiles\PlayerFirePrj.prefab
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Art Assets\Player\Projectiles\PlayerFirePrj.prefab
-    projectPath: Assets\Art Assets\Player\Projectiles\PlayerFirePrj.prefab
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Art Assets\Player\Projectiles\PlayerFireSmoke.prefab
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Art Assets\Player\Projectiles\PlayerFireSmoke.prefab
-    projectPath: Assets\Art Assets\Player\Projectiles\PlayerFireSmoke.prefab
+  - path: Assets\Art Assets\Player\PlayerCharacterWalkCycle.png
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Art Assets\Player\PlayerCharacterWalkCycle.png
+    projectPath: Assets\Art Assets\Player\PlayerCharacterWalkCycle.png
     originalPath: 
     status: 3
     staged: 0
   - path: Assets\Scripts etc\Scenes\SampleScene.unity
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Scripts etc\Scenes\SampleScene.unity
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Scripts etc\Scenes\SampleScene.unity
     projectPath: Assets\Scripts etc\Scenes\SampleScene.unity
     originalPath: 
     status: 3
     staged: 0
+  - path: Assets\Scripts etc\Scripts\Player Character\PCAnim.cs
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Scripts etc\Scripts\Player
+      Character\PCAnim.cs
+    projectPath: Assets\Scripts etc\Scripts\Player Character\PCAnim.cs
+    originalPath: 
+    status: 3
+    staged: 0
   - path: Assets\Scripts etc\Scripts\Player Character\PlayerMovement.cs
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Scripts etc\Scripts\Player
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Scripts etc\Scripts\Player
       Character\PlayerMovement.cs
     projectPath: Assets\Scripts etc\Scripts\Player Character\PlayerMovement.cs
     originalPath: 
     status: 3
-    staged: 0
-  - path: Assets\Scripts etc\Scripts\Player Character\Projectile.cs
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Assets\Scripts etc\Scripts\Player
-      Character\Projectile.cs
-    projectPath: Assets\Scripts etc\Scripts\Player Character\Projectile.cs
+    staged: 1
+  - path: Assets\Scripts etc\Scripts\Player Character\PlayerShoot.cs
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Assets\Scripts etc\Scripts\Player
+      Character\PlayerShoot.cs
+    projectPath: Assets\Scripts etc\Scripts\Player Character\PlayerShoot.cs
     originalPath: 
     status: 3
     staged: 0
   - path: Library\ArtifactDB
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\ArtifactDB
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\ArtifactDB
     projectPath: Library\ArtifactDB
     originalPath: 
     status: 3
-    staged: 0
-  - path: Library\Artifacts\02\02c5c2de10ce4c4a3dc3183a9234303a
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\02\02c5c2de10ce4c4a3dc3183a9234303a
-    projectPath: Library\Artifacts\02\02c5c2de10ce4c4a3dc3183a9234303a
+    staged: 1
+  - path: Library\Artifacts\14\149f2d5814376c194feb65ed1d5ac518
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\14\149f2d5814376c194feb65ed1d5ac518
+    projectPath: Library\Artifacts\14\149f2d5814376c194feb65ed1d5ac518
     originalPath: 
     status: 1
     staged: 0
-  - path: Library\Artifacts\05\055c8104e28ef4e995f9d9b6655c4064
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\05\055c8104e28ef4e995f9d9b6655c4064
-    projectPath: Library\Artifacts\05\055c8104e28ef4e995f9d9b6655c4064
+  - path: Library\Artifacts\16\16e577cd3a01eef7a75292cbd5ce2e97
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\16\16e577cd3a01eef7a75292cbd5ce2e97
+    projectPath: Library\Artifacts\16\16e577cd3a01eef7a75292cbd5ce2e97
     originalPath: 
     status: 5
-    staged: 0
-  - path: Library\Artifacts\18\18767c36e5324d9b0b2b615a1e307446
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\18\18767c36e5324d9b0b2b615a1e307446
-    projectPath: Library\Artifacts\18\18767c36e5324d9b0b2b615a1e307446
-    originalPath: 
-    status: 1
     staged: 0
   - path: Library\Artifacts\1b\1b9a4c2ccdff154bdd751313bf21ef56
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\1b\1b9a4c2ccdff154bdd751313bf21ef56
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\1b\1b9a4c2ccdff154bdd751313bf21ef56
     projectPath: Library\Artifacts\1b\1b9a4c2ccdff154bdd751313bf21ef56
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\1f\1f1c02ac733187414c709d022c51bf1e
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\1f\1f1c02ac733187414c709d022c51bf1e
-    projectPath: Library\Artifacts\1f\1f1c02ac733187414c709d022c51bf1e
-    originalPath: 
-    status: 1
-    staged: 0
+    status: 5
+    staged: 1
   - path: Library\Artifacts\28\285f24248f0b975be2831cf082864a72
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\28\285f24248f0b975be2831cf082864a72
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\28\285f24248f0b975be2831cf082864a72
     projectPath: Library\Artifacts\28\285f24248f0b975be2831cf082864a72
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\34\34e6534a3e0590cfebc235dae72d9e9f
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\34\34e6534a3e0590cfebc235dae72d9e9f
-    projectPath: Library\Artifacts\34\34e6534a3e0590cfebc235dae72d9e9f
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\40\4024228f8c22315cf043c600c692efcc
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\40\4024228f8c22315cf043c600c692efcc
-    projectPath: Library\Artifacts\40\4024228f8c22315cf043c600c692efcc
-    originalPath: 
     status: 5
+    staged: 1
+  - path: Library\Artifacts\2e\2e29c5ac6768207713632d0db6a351a9
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\2e\2e29c5ac6768207713632d0db6a351a9
+    projectPath: Library\Artifacts\2e\2e29c5ac6768207713632d0db6a351a9
+    originalPath: 
+    status: 1
     staged: 0
   - path: Library\Artifacts\40\403272cfa0121555445260e2f9e301d2
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\40\403272cfa0121555445260e2f9e301d2
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\40\403272cfa0121555445260e2f9e301d2
     projectPath: Library\Artifacts\40\403272cfa0121555445260e2f9e301d2
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\42\4238ac47909b82ed7ae3f0cf3123d306
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\42\4238ac47909b82ed7ae3f0cf3123d306
-    projectPath: Library\Artifacts\42\4238ac47909b82ed7ae3f0cf3123d306
-    originalPath: 
     status: 5
-    staged: 0
-  - path: Library\Artifacts\49\49f7aec73a49b44cd3d4c477a070bbf4
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\49\49f7aec73a49b44cd3d4c477a070bbf4
-    projectPath: Library\Artifacts\49\49f7aec73a49b44cd3d4c477a070bbf4
+    staged: 1
+  - path: Library\Artifacts\4a\4aab6f06ecf6d53ab3053c83d0c4b9e2
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\4a\4aab6f06ecf6d53ab3053c83d0c4b9e2
+    projectPath: Library\Artifacts\4a\4aab6f06ecf6d53ab3053c83d0c4b9e2
     originalPath: 
     status: 1
     staged: 0
   - path: Library\Artifacts\5a\5a286a41ab186d7f17f399902bde8405
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\5a\5a286a41ab186d7f17f399902bde8405
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\5a\5a286a41ab186d7f17f399902bde8405
     projectPath: Library\Artifacts\5a\5a286a41ab186d7f17f399902bde8405
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library\Artifacts\62\62759dd3361028d126e2e1b4db249725
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\62\62759dd3361028d126e2e1b4db249725
+    projectPath: Library\Artifacts\62\62759dd3361028d126e2e1b4db249725
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library\Artifacts\65\65fe0c37b8aecfdd6c434bbaf414f301
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\65\65fe0c37b8aecfdd6c434bbaf414f301
+    projectPath: Library\Artifacts\65\65fe0c37b8aecfdd6c434bbaf414f301
     originalPath: 
     status: 1
     staged: 0
   - path: Library\Artifacts\66\660633923a43db40d42eaac815bf4b06
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\66\660633923a43db40d42eaac815bf4b06
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\66\660633923a43db40d42eaac815bf4b06
     projectPath: Library\Artifacts\66\660633923a43db40d42eaac815bf4b06
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library\Artifacts\6a\6a4c334d1907e0d62b9e4d9f5bc7f762
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\6a\6a4c334d1907e0d62b9e4d9f5bc7f762
+    projectPath: Library\Artifacts\6a\6a4c334d1907e0d62b9e4d9f5bc7f762
     originalPath: 
     status: 1
     staged: 0
   - path: Library\Artifacts\6f\6fb09736515d7c72e6db3098ed5fac14
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\6f\6fb09736515d7c72e6db3098ed5fac14
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\6f\6fb09736515d7c72e6db3098ed5fac14
     projectPath: Library\Artifacts\6f\6fb09736515d7c72e6db3098ed5fac14
     originalPath: 
-    status: 1
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\75\7583a7ea99a97e25c061791f13fa4367
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\75\7583a7ea99a97e25c061791f13fa4367
+    projectPath: Library\Artifacts\75\7583a7ea99a97e25c061791f13fa4367
+    originalPath: 
+    status: 5
     staged: 0
   - path: Library\Artifacts\77\777111630ba317a2d3332aa12f95c674
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\77\777111630ba317a2d3332aa12f95c674
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\77\777111630ba317a2d3332aa12f95c674
     projectPath: Library\Artifacts\77\777111630ba317a2d3332aa12f95c674
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\7c\7cd86989e9b31a153317b5b071873a16
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\7c\7cd86989e9b31a153317b5b071873a16
-    projectPath: Library\Artifacts\7c\7cd86989e9b31a153317b5b071873a16
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\87\87541f9d4165ef704488d40a4c400920
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\87\87541f9d4165ef704488d40a4c400920
+    projectPath: Library\Artifacts\87\87541f9d4165ef704488d40a4c400920
     originalPath: 
     status: 5
     staged: 0
-  - path: Library\Artifacts\86\869bbd26ea4d86fdffaad9b7dcf7893a
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\86\869bbd26ea4d86fdffaad9b7dcf7893a
-    projectPath: Library\Artifacts\86\869bbd26ea4d86fdffaad9b7dcf7893a
-    originalPath: 
-    status: 5
-    staged: 0
+  - path: Library\Artifacts\8c\8c9ca2b22091c52c8f9fa9e467b1cdd4
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\8c\8c9ca2b22091c52c8f9fa9e467b1cdd4
+    projectPath: Library\Artifacts\8c\8c9ca2b22091c52c8f9fa9e467b1cdd4
+    originalPath: Library\Artifacts\02\02c5c2de10ce4c4a3dc3183a9234303a
+    status: 6
+    staged: 1
   - path: Library\Artifacts\96\963c7c0b727570fd07da9cdacb18705b
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\96\963c7c0b727570fd07da9cdacb18705b
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\96\963c7c0b727570fd07da9cdacb18705b
     projectPath: Library\Artifacts\96\963c7c0b727570fd07da9cdacb18705b
+    originalPath: 
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\9f\9f325d7f39d4484a10adfaa4d8c02469
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\9f\9f325d7f39d4484a10adfaa4d8c02469
+    projectPath: Library\Artifacts\9f\9f325d7f39d4484a10adfaa4d8c02469
     originalPath: 
     status: 1
     staged: 0
   - path: Library\Artifacts\a2\a2dff409c29a929821b37f76879681fc
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\a2\a2dff409c29a929821b37f76879681fc
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\a2\a2dff409c29a929821b37f76879681fc
     projectPath: Library\Artifacts\a2\a2dff409c29a929821b37f76879681fc
+    originalPath: 
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\ad\ada904e12a382f00ae83543b82ddaa3e
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\ad\ada904e12a382f00ae83543b82ddaa3e
+    projectPath: Library\Artifacts\ad\ada904e12a382f00ae83543b82ddaa3e
     originalPath: 
     status: 1
     staged: 0
-  - path: Library\Artifacts\ba\baa8d4190dbe25ddd90b2c311adb14bf
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\ba\baa8d4190dbe25ddd90b2c311adb14bf
-    projectPath: Library\Artifacts\ba\baa8d4190dbe25ddd90b2c311adb14bf
+  - path: Library\Artifacts\b3\b349efbb65a54651ddd54d9820186239
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\b3\b349efbb65a54651ddd54d9820186239
+    projectPath: Library\Artifacts\b3\b349efbb65a54651ddd54d9820186239
     originalPath: 
     status: 1
     staged: 0
   - path: Library\Artifacts\be\be17e93133d5d87ba6b570582d92c70f
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\be\be17e93133d5d87ba6b570582d92c70f
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\be\be17e93133d5d87ba6b570582d92c70f
     projectPath: Library\Artifacts\be\be17e93133d5d87ba6b570582d92c70f
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\da\da44acaaf16ef9aa598a01e065899108
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\da\da44acaaf16ef9aa598a01e065899108
-    projectPath: Library\Artifacts\da\da44acaaf16ef9aa598a01e065899108
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\be\beb7641fb755dbc7f84f0934ef8eadd8
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\be\beb7641fb755dbc7f84f0934ef8eadd8
+    projectPath: Library\Artifacts\be\beb7641fb755dbc7f84f0934ef8eadd8
     originalPath: 
     status: 1
     staged: 0
-  - path: Library\Artifacts\db\db0ff02ea09486942182a2811627a174
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\db\db0ff02ea09486942182a2811627a174
-    projectPath: Library\Artifacts\db\db0ff02ea09486942182a2811627a174
+  - path: Library\Artifacts\d2\d2da7b623406dd71c1c7ced1cb414ccd
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\d2\d2da7b623406dd71c1c7ced1cb414ccd
+    projectPath: Library\Artifacts\d2\d2da7b623406dd71c1c7ced1cb414ccd
     originalPath: 
     status: 5
     staged: 0
+  - path: Library\Artifacts\da\da44acaaf16ef9aa598a01e065899108
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\da\da44acaaf16ef9aa598a01e065899108
+    projectPath: Library\Artifacts\da\da44acaaf16ef9aa598a01e065899108
+    originalPath: 
+    status: 5
+    staged: 1
   - path: Library\Artifacts\e0\e04917913122a23b9c7da1e785b453bc
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\e0\e04917913122a23b9c7da1e785b453bc
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\e0\e04917913122a23b9c7da1e785b453bc
     projectPath: Library\Artifacts\e0\e04917913122a23b9c7da1e785b453bc
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\Artifacts\e7\e747c2db0cdecb44eef4b7c488b851c1
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\e7\e747c2db0cdecb44eef4b7c488b851c1
-    projectPath: Library\Artifacts\e7\e747c2db0cdecb44eef4b7c488b851c1
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\e5\e5c11fd2ef1ad2524b18540ca313d3d2
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\e5\e5c11fd2ef1ad2524b18540ca313d3d2
+    projectPath: Library\Artifacts\e5\e5c11fd2ef1ad2524b18540ca313d3d2
     originalPath: 
-    status: 1
-    staged: 0
+    status: 5
+    staged: 1
   - path: Library\Artifacts\ea\ea34265e7be83d59f758535ec34adcbc
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\ea\ea34265e7be83d59f758535ec34adcbc
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\ea\ea34265e7be83d59f758535ec34adcbc
     projectPath: Library\Artifacts\ea\ea34265e7be83d59f758535ec34adcbc
+    originalPath: 
+    status: 5
+    staged: 1
+  - path: Library\Artifacts\f3\f34504d5e709e98eed95c4385a0281d9
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\f3\f34504d5e709e98eed95c4385a0281d9
+    projectPath: Library\Artifacts\f3\f34504d5e709e98eed95c4385a0281d9
     originalPath: 
     status: 1
     staged: 0
   - path: Library\Artifacts\f5\f5399d00731b3791b41375508e085b33
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\Artifacts\f5\f5399d00731b3791b41375508e085b33
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\Artifacts\f5\f5399d00731b3791b41375508e085b33
     projectPath: Library\Artifacts\f5\f5399d00731b3791b41375508e085b33
     originalPath: 
-    status: 1
+    status: 5
     staged: 0
   - path: Library\CurrentLayout-default.dwlt
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\CurrentLayout-default.dwlt
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\CurrentLayout-default.dwlt
     projectPath: Library\CurrentLayout-default.dwlt
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\CurrentMaximizeLayout.dwlt
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\CurrentMaximizeLayout.dwlt
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\CurrentMaximizeLayout.dwlt
     projectPath: Library\CurrentMaximizeLayout.dwlt
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\EditorInstance.json
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\EditorInstance.json
-    projectPath: Library\EditorInstance.json
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\EditorUserBuildSettings.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\EditorUserBuildSettings.asset
-    projectPath: Library\EditorUserBuildSettings.asset
-    originalPath: 
     status: 3
-    staged: 0
-  - path: Library\expandedItems
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\expandedItems
-    projectPath: Library\expandedItems
-    originalPath: 
-    status: 3
-    staged: 0
+    staged: 1
   - path: Library\gfu\cache\gitlocks.yaml
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\gfu\cache\gitlocks.yaml
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\gfu\cache\gitlocks.yaml
     projectPath: Library\gfu\cache\gitlocks.yaml
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\gfu\cache\gitstatusentries.yaml
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\gfu\cache\gitstatusentries.yaml
     projectPath: Library\gfu\cache\gitstatusentries.yaml
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\gfu\cache\gittrackingstatus.yaml
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\gfu\cache\gittrackingstatus.yaml
     projectPath: Library\gfu\cache\gittrackingstatus.yaml
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\gfu\cache\repoinfo.yaml
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\gfu\cache\repoinfo.yaml
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\gfu\cache\repoinfo.yaml
     projectPath: Library\gfu\cache\repoinfo.yaml
     originalPath: 
     status: 3
-    staged: 0
-  - path: Library\InspectorExpandedItems.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\SceneVisibilityState.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\SceneVisibilityState.asset
-    projectPath: Library\SceneVisibilityState.asset
-    originalPath: 
-    status: 3
-    staged: 0
+    staged: 1
   - path: Library\SourceAssetDB
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\SourceAssetDB
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
     originalPath: 
     status: 3
-    staged: 0
-  - path: Library\SpriteAtlasDatabase.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\SpriteAtlasDatabase.asset
-    projectPath: Library\SpriteAtlasDatabase.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\StateCache\Hierarchy\6f046a-ffd27784d5618404a8.json
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\StateCache\Hierarchy\6f046a-ffd27784d5618404a8.json
-    projectPath: Library\StateCache\Hierarchy\6f046a-ffd27784d5618404a8.json
+    staged: 1
+  - path: Library\StateCache\Hierarchy\6f046a-81149909ad33b5740b.json
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\StateCache\Hierarchy\6f046a-81149909ad33b5740b.json
+    projectPath: Library\StateCache\Hierarchy\6f046a-81149909ad33b5740b.json
     originalPath: 
     status: 3
     staged: 0
   - path: Library\StateCache\Hierarchy\6f046a-mainStage.json
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\StateCache\Hierarchy\6f046a-mainStage.json
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\StateCache\Hierarchy\6f046a-mainStage.json
     projectPath: Library\StateCache\Hierarchy\6f046a-mainStage.json
     originalPath: 
     status: 3
-    staged: 0
-  - path: Library\StateCache\SceneView\d44f2d-fecacea8fc3152e4a8.json
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\StateCache\SceneView\d44f2d-fecacea8fc3152e4a8.json
-    projectPath: Library\StateCache\SceneView\d44f2d-fecacea8fc3152e4a8.json
+    staged: 1
+  - path: Library\StateCache\SceneView\d44f2d-mainStage.json
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Library\StateCache\SceneView\d44f2d-mainStage.json
+    projectPath: Library\StateCache\SceneView\d44f2d-mainStage.json
     originalPath: 
     status: 3
-    staged: 0
-  - path: Library\StateCache\SceneView\d44f2d-mainStage.json
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Library\StateCache\SceneView\d44f2d-mainStage.json
-    projectPath: Library\StateCache\SceneView\d44f2d-mainStage.json
+    staged: 1
+  - path: obj\Debug\Assembly-CSharp.csproj.FileListAbsolute.txt
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\obj\Debug\Assembly-CSharp.csproj.FileListAbsolute.txt
+    projectPath: obj\Debug\Assembly-CSharp.csproj.FileListAbsolute.txt
     originalPath: 
     status: 3
     staged: 0
   - path: obj\Debug\build.force
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\obj\Debug\build.force
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\obj\Debug\build.force
     projectPath: obj\Debug\build.force
     originalPath: 
-    status: 1
-    staged: 0
-  - path: ProjectSettings\EditorBuildSettings.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\ProjectSettings\EditorBuildSettings.asset
-    projectPath: ProjectSettings\EditorBuildSettings.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: ProjectSettings\Physics2DSettings.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\ProjectSettings\Physics2DSettings.asset
-    projectPath: ProjectSettings\Physics2DSettings.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: ProjectSettings\QualitySettings.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\ProjectSettings\QualitySettings.asset
-    projectPath: ProjectSettings\QualitySettings.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: ProjectSettings\TagManager.asset
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\ProjectSettings\TagManager.asset
-    projectPath: ProjectSettings\TagManager.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Temp\__Backupscenes\0.backup
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\__Backupscenes\0.backup
-    projectPath: Temp\__Backupscenes\0.backup
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\ProcessJobs\2821ef943c9fe60d2091335ebf161fe5.bakert
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\ProcessJobs\2821ef943c9fe60d2091335ebf161fe5.bakert
-    projectPath: Temp\ProcessJobs\2821ef943c9fe60d2091335ebf161fe5.bakert
-    originalPath: 
-    status: 1
+    status: 5
     staged: 0
   - path: Temp\ProcessJobs\59532cc49335eb0581e05d24ee07ee50.bakert
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\ProcessJobs\59532cc49335eb0581e05d24ee07ee50.bakert
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\ProcessJobs\59532cc49335eb0581e05d24ee07ee50.bakert
     projectPath: Temp\ProcessJobs\59532cc49335eb0581e05d24ee07ee50.bakert
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityLockfile
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityLockfile
-    projectPath: Temp\UnityLockfile
+    status: 4
+    staged: 1
+  - path: Temp\UnityTempFile-193655b560963ef468f67a0dab10a5bc
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-193655b560963ef468f67a0dab10a5bc
+    projectPath: Temp\UnityTempFile-193655b560963ef468f67a0dab10a5bc
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-03e2dbdd2ecfa3b468c95f550efb6415
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-03e2dbdd2ecfa3b468c95f550efb6415
-    projectPath: Temp\UnityTempFile-03e2dbdd2ecfa3b468c95f550efb6415
+  - path: Temp\UnityTempFile-1d0cadd942f32ec4da795179100d2a5f
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-1d0cadd942f32ec4da795179100d2a5f
+    projectPath: Temp\UnityTempFile-1d0cadd942f32ec4da795179100d2a5f
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-0c503745f68aa2245ba4011a5f057ac0
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-0c503745f68aa2245ba4011a5f057ac0
-    projectPath: Temp\UnityTempFile-0c503745f68aa2245ba4011a5f057ac0
+  - path: Temp\UnityTempFile-1ec042c138f050244b4a5a3cb82850b5
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-1ec042c138f050244b4a5a3cb82850b5
+    projectPath: Temp\UnityTempFile-1ec042c138f050244b4a5a3cb82850b5
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-19a501781ab366645ab6a6ad52ce07cd
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-19a501781ab366645ab6a6ad52ce07cd
-    projectPath: Temp\UnityTempFile-19a501781ab366645ab6a6ad52ce07cd
+  - path: Temp\UnityTempFile-206c67f67ce7ea749896893a7c5b9374
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-206c67f67ce7ea749896893a7c5b9374
+    projectPath: Temp\UnityTempFile-206c67f67ce7ea749896893a7c5b9374
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-2d3d2308a761c5b4a9063aa7d9c0b60c
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-2d3d2308a761c5b4a9063aa7d9c0b60c
-    projectPath: Temp\UnityTempFile-2d3d2308a761c5b4a9063aa7d9c0b60c
+  - path: Temp\UnityTempFile-29ff38ed223938043a96f866af16f6a4
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-29ff38ed223938043a96f866af16f6a4
+    projectPath: Temp\UnityTempFile-29ff38ed223938043a96f866af16f6a4
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-35e9acb412948f74aba45eacf581eb50
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-35e9acb412948f74aba45eacf581eb50
-    projectPath: Temp\UnityTempFile-35e9acb412948f74aba45eacf581eb50
+  - path: Temp\UnityTempFile-300cca5dfe829cc46a6aac3797cd60fe
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-300cca5dfe829cc46a6aac3797cd60fe
+    projectPath: Temp\UnityTempFile-300cca5dfe829cc46a6aac3797cd60fe
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-38a9f7ac61288954f9ebe017387eb4c7
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-38a9f7ac61288954f9ebe017387eb4c7
-    projectPath: Temp\UnityTempFile-38a9f7ac61288954f9ebe017387eb4c7
+  - path: Temp\UnityTempFile-38aaea1679b5e0244b27d7a0f148e1be
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-38aaea1679b5e0244b27d7a0f148e1be
+    projectPath: Temp\UnityTempFile-38aaea1679b5e0244b27d7a0f148e1be
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-416073e65446fd44f86095bdc5f23ac7
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-416073e65446fd44f86095bdc5f23ac7
-    projectPath: Temp\UnityTempFile-416073e65446fd44f86095bdc5f23ac7
+  - path: Temp\UnityTempFile-43ef27f0af16afc46b70debfed66e892
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-43ef27f0af16afc46b70debfed66e892
+    projectPath: Temp\UnityTempFile-43ef27f0af16afc46b70debfed66e892
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-45eff8d493c806542a0b4e96e119150b
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-45eff8d493c806542a0b4e96e119150b
-    projectPath: Temp\UnityTempFile-45eff8d493c806542a0b4e96e119150b
+  - path: Temp\UnityTempFile-71f6d56ac7129f3438493b2b4da89745
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-71f6d56ac7129f3438493b2b4da89745
+    projectPath: Temp\UnityTempFile-71f6d56ac7129f3438493b2b4da89745
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-46b1956da1797a5469f6e9f699784887
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-46b1956da1797a5469f6e9f699784887
-    projectPath: Temp\UnityTempFile-46b1956da1797a5469f6e9f699784887
+  - path: Temp\UnityTempFile-72bc49ce31f8edc4d817b2461d6aa007
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-72bc49ce31f8edc4d817b2461d6aa007
+    projectPath: Temp\UnityTempFile-72bc49ce31f8edc4d817b2461d6aa007
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-4abef7a0e62ea0e4984529b07274b243
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-4abef7a0e62ea0e4984529b07274b243
-    projectPath: Temp\UnityTempFile-4abef7a0e62ea0e4984529b07274b243
+  - path: Temp\UnityTempFile-72cdcb393603d064cabd069fcb0282b4
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-72cdcb393603d064cabd069fcb0282b4
+    projectPath: Temp\UnityTempFile-72cdcb393603d064cabd069fcb0282b4
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-8aa339de3844f034a899d2608f292f92
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-8aa339de3844f034a899d2608f292f92
-    projectPath: Temp\UnityTempFile-8aa339de3844f034a899d2608f292f92
+  - path: Temp\UnityTempFile-77fef1ca1bea4d741a81c7723de880be
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-77fef1ca1bea4d741a81c7723de880be
+    projectPath: Temp\UnityTempFile-77fef1ca1bea4d741a81c7723de880be
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-95995aa0107b3524db8d703cd91f8e8a
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-95995aa0107b3524db8d703cd91f8e8a
-    projectPath: Temp\UnityTempFile-95995aa0107b3524db8d703cd91f8e8a
+  - path: Temp\UnityTempFile-7a0667220525507448ff27bf4cd7ecec
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-7a0667220525507448ff27bf4cd7ecec
+    projectPath: Temp\UnityTempFile-7a0667220525507448ff27bf4cd7ecec
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-9607c7f532b0ed846b443fd8657d8652
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-9607c7f532b0ed846b443fd8657d8652
-    projectPath: Temp\UnityTempFile-9607c7f532b0ed846b443fd8657d8652
+  - path: Temp\UnityTempFile-7af9a34a893a4c74192ae6b948da28ff
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-7af9a34a893a4c74192ae6b948da28ff
+    projectPath: Temp\UnityTempFile-7af9a34a893a4c74192ae6b948da28ff
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-97aeef54b29706748bb9553b7e8f74d5
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-97aeef54b29706748bb9553b7e8f74d5
-    projectPath: Temp\UnityTempFile-97aeef54b29706748bb9553b7e8f74d5
+  - path: Temp\UnityTempFile-88629562d91814f4c92aba93f6113722
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-88629562d91814f4c92aba93f6113722
+    projectPath: Temp\UnityTempFile-88629562d91814f4c92aba93f6113722
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-ab93074e2dd34a645b2cbfe29ff57614
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-ab93074e2dd34a645b2cbfe29ff57614
-    projectPath: Temp\UnityTempFile-ab93074e2dd34a645b2cbfe29ff57614
+  - path: Temp\UnityTempFile-8e28c8309c5cef847bbf3091df4c14db
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-8e28c8309c5cef847bbf3091df4c14db
+    projectPath: Temp\UnityTempFile-8e28c8309c5cef847bbf3091df4c14db
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-b0b5857fca36eeb4ba1dc9596db5dcfb
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-b0b5857fca36eeb4ba1dc9596db5dcfb
-    projectPath: Temp\UnityTempFile-b0b5857fca36eeb4ba1dc9596db5dcfb
+  - path: Temp\UnityTempFile-90b51274b10f13740ad42ffa3e12bb7d
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-90b51274b10f13740ad42ffa3e12bb7d
+    projectPath: Temp\UnityTempFile-90b51274b10f13740ad42ffa3e12bb7d
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-b1cd84953110f9341bd547b35780b862
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-b1cd84953110f9341bd547b35780b862
-    projectPath: Temp\UnityTempFile-b1cd84953110f9341bd547b35780b862
+  - path: Temp\UnityTempFile-9a6aff31d15a3354f97a3620cd1ceb7e
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-9a6aff31d15a3354f97a3620cd1ceb7e
+    projectPath: Temp\UnityTempFile-9a6aff31d15a3354f97a3620cd1ceb7e
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-b66b23fa1ac69d6409b79bc13d3d460f
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-b66b23fa1ac69d6409b79bc13d3d460f
-    projectPath: Temp\UnityTempFile-b66b23fa1ac69d6409b79bc13d3d460f
+  - path: Temp\UnityTempFile-a20cf325012fc814bb33b86e097e617c
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-a20cf325012fc814bb33b86e097e617c
+    projectPath: Temp\UnityTempFile-a20cf325012fc814bb33b86e097e617c
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-ce900f5e33cc2024ea786f1a5fcd0914
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-ce900f5e33cc2024ea786f1a5fcd0914
-    projectPath: Temp\UnityTempFile-ce900f5e33cc2024ea786f1a5fcd0914
+  - path: Temp\UnityTempFile-ab80b04aa1002d541a797890c65b9f0f
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-ab80b04aa1002d541a797890c65b9f0f
+    projectPath: Temp\UnityTempFile-ab80b04aa1002d541a797890c65b9f0f
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-cef55d5237568ee4bb14e3c1ed1c07f0
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-cef55d5237568ee4bb14e3c1ed1c07f0
-    projectPath: Temp\UnityTempFile-cef55d5237568ee4bb14e3c1ed1c07f0
+  - path: Temp\UnityTempFile-b56546866ae6e8c49ac16f962c38eb5e
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-b56546866ae6e8c49ac16f962c38eb5e
+    projectPath: Temp\UnityTempFile-b56546866ae6e8c49ac16f962c38eb5e
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-ed43f4f649c94df49ac8b0cbef0e7dad
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-ed43f4f649c94df49ac8b0cbef0e7dad
-    projectPath: Temp\UnityTempFile-ed43f4f649c94df49ac8b0cbef0e7dad
+  - path: Temp\UnityTempFile-c0764bea8145cf043841ad41b95a3496
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-c0764bea8145cf043841ad41b95a3496
+    projectPath: Temp\UnityTempFile-c0764bea8145cf043841ad41b95a3496
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-efc8eced36b85a04f9ff0db75f668afc
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-efc8eced36b85a04f9ff0db75f668afc
-    projectPath: Temp\UnityTempFile-efc8eced36b85a04f9ff0db75f668afc
+  - path: Temp\UnityTempFile-e3d4d33b83d01a6459ad56ff4022ef87
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-e3d4d33b83d01a6459ad56ff4022ef87
+    projectPath: Temp\UnityTempFile-e3d4d33b83d01a6459ad56ff4022ef87
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-f08e017421aaef344a2b344aa853ddbe
-    fullPath: H:\Unity Project\ELE-MENTAL GitHub\Temp\UnityTempFile-f08e017421aaef344a2b344aa853ddbe
-    projectPath: Temp\UnityTempFile-f08e017421aaef344a2b344aa853ddbe
+  - path: Temp\UnityTempFile-fd8c793cf2a639f4396f27ac7ec28047
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-fd8c793cf2a639f4396f27ac7ec28047
+    projectPath: Temp\UnityTempFile-fd8c793cf2a639f4396f27ac7ec28047
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-feab25a95a9558b4286dfc66dcd8a480
+    fullPath: C:\Unity Projects\ELE-MENTAL GitHub\Temp\UnityTempFile-feab25a95a9558b4286dfc66dcd8a480
+    projectPath: Temp\UnityTempFile-feab25a95a9558b4286dfc66dcd8a480
     originalPath: 
     status: 1
     staged: 0

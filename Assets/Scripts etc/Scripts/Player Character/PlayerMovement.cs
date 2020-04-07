@@ -10,39 +10,42 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 TestPos;
     public Vector2 NewPos;
 
-    public float inputX;
-    public float inputY;
+    public float InputX;
+    public float InputY;
 
     public LayerMask MoveLMask;
 
     //Referring to the 2 different trees, VisRot is stuff affected by rotation and so on such as the character body, while StaHit is things like the character's hitbox where we don't want it to rotate necessarily.
     public GameObject VisRot;
     public GameObject StaHit;
+    //Grab the leg object so we can rotate it for movement later
+    public GameObject Legs;
     //And we'll grab the movement hitbox too.
     public GameObject HBox;
 
     //Either uses the standard 360 controller set up if true, will use keyboard and mouse if false
     public bool Controller;
 
-
+    //sets an array that contains the last second of ticks
+    
     void Update()
     {
         //Get Axis Information
         if (Controller)
         {
-            inputX = Input.GetAxis("L_XAxis_1");
-            inputY = Input.GetAxis("L_YAxis_1");
+            InputX = Input.GetAxis("L_XAxis_1");
+            InputY = Input.GetAxis("L_YAxis_1");
         }
         else
         {
-            inputX = Input.GetAxis("Move_XAxis");
-            inputY = Input.GetAxis("Move_YAxis");
+            InputX = Input.GetAxis("Move_XAxis");
+            InputY = Input.GetAxis("Move_YAxis");
         }
 
         //Input is -1 to 1, so multiply it by some number
         movement = new Vector2(
-          speed.x * inputX,
-          speed.y * inputY);
+          speed.x * InputX,
+          speed.y * InputY);
 
         //If the position checks out, we can see this so that the game moves the character to its new pos.
         NewPos = new Vector2(transform.position.x + movement.x, transform.position.y + movement.y);
@@ -80,11 +83,13 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //We'll shove the character away enough from the wall that the boxcollider won't hit it.
 
-                    TestedNewPos.x = (hit.point.x + (box.size.x));
+                    //TestedNewPos.x = (hit.point.x + (box.size.x));
+
+                    TestedNewPos.x = (hit.point.x);
                 }
                 else if (NewPos.x > hit.point.x)
                 {
-                    TestedNewPos.x = (hit.point.x - (box.size.x));
+                    TestedNewPos.x = (hit.point.x);
                 }
 
                 //For the y value...
@@ -93,12 +98,12 @@ public class PlayerMovement : MonoBehaviour
                 if (NewPos.y < hit.point.y)
                 {
                     //We'll shove the character away enough from the wall that the boxcollider won't hit it.
-                    TestedNewPos.y = (hit.point.y + (box.size.y));
+                    TestedNewPos.y = (hit.point.y);
                 }
                 //Or if the character is moving down into a wall...
                 else if (NewPos.y > hit.point.y)
                 {
-                    TestedNewPos.y = (hit.point.y - (box.size.y));
+                    TestedNewPos.y = (hit.point.y);
                 }
                 //If neither of those were true, there's no change (ie. TestedNewPos.x == hit.point.X) and it doesn't matter.
                 
@@ -117,8 +122,15 @@ public class PlayerMovement : MonoBehaviour
             TestedNewPos = new Vector3(NewPos.x, NewPos.y, transform.position.z);
         }
 
+        //Set the rotation to match the actual direction our character is going
+        Vector2 look = new Vector2(InputX, InputY);
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
+        Legs.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         //Finally, set the character's position.
         transform.position = new Vector3(TestedNewPos.x, TestedNewPos.y, transform.position.z);
+
+
     }
 
     void OnTriggerEnter2D(Collider2D col)

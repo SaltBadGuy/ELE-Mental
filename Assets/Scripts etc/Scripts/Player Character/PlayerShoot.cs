@@ -19,10 +19,10 @@ public class PlayerShoot : MonoBehaviour
     public float DamageDealt;
     public float RateOfFire;
     public float FireCD;
-    public float inputX;
-    public float inputY;
-    public float lookX;
-    public float lookY;
+    public float InputX;
+    public float InputY;
+    public float LookX;
+    public float LookY;
     public float GainElement;
 
     public GameObject FireBlast;
@@ -53,16 +53,16 @@ public class PlayerShoot : MonoBehaviour
 
         if (Controller)
         {
-            inputX = Input.GetAxis("R_XAxis_1");
-            inputY = Input.GetAxis("R_YAxis_1");
+            InputX = Input.GetAxis("R_XAxis_1");
+            InputY = Input.GetAxis("R_YAxis_1");
         }
         else
         {
         }
 
-        if (inputX != 0 || inputY != 0)
+        if (InputX != 0 || InputY != 0)
         {
-            look = new Vector2(inputX, inputY);
+            look = new Vector2(InputX, InputY);
             StartFiring = true;
         }
         else
@@ -89,18 +89,14 @@ public class PlayerShoot : MonoBehaviour
                 {
                     if (GetComponent<PlayerState>().ElementEquipped == "Fire")
                     {
-                        Debug.Log("Firing!");
                         FireCD = RateOfFire;
                         GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
                         Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
-                        //GameObject WandSparkObj = Instantiate(ProjSpark, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
-                        //WandSparkObj.GetComponent<PartTrack>().TargetObj = ProjSpawn;
                         //Projectile.GetComponent<Bullet>().DamageDealt = DamageDealt;
                         Destroy(Projectile, 5f);
                     }
                     else if (GetComponent<PlayerState>().ElementEquipped == "Water")
                     {
-                        Debug.Log("Firing!");
                         FireCD = RateOfFire;
                         GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
                         Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
@@ -111,7 +107,6 @@ public class PlayerShoot : MonoBehaviour
                     }
                     else if (GetComponent<PlayerState>().ElementEquipped == "Earth")
                     {
-                        Debug.Log("Firing!");
                         FireCD = RateOfFire;
                         GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
                         Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
@@ -124,7 +119,6 @@ public class PlayerShoot : MonoBehaviour
                     }
                     else if (GetComponent<PlayerState>().ElementEquipped == "Air")
                     {
-                        Debug.Log("Firing!");
                         FireCD = RateOfFire;
                         GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
                         Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
