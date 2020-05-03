@@ -28,7 +28,7 @@ AnimationClip:
     - time: 0.05
       value: {fileID: 21300002, guid: 8aceeeeada475194c855a14a22a5bf5d, type: 3}
     attribute: m_Sprite
-    path: FireObjects/FireSpark
+    path: Arms/FireObjects/FireSpark
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -39,7 +39,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 95440935
+      path: 3446988143
       attribute: 0
       script: {fileID: 0}
       typeID: 212

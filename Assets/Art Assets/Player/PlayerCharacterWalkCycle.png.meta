@@ -23,6 +23,24 @@ TextureImporter:
   - first:
       213: 21300012
     second: PlayerCharacterWalkCycle_6
+  - first:
+      213: 5745621047724856089
+    second: PlayerCharacterWalkCycle_7
+  - first:
+      213: -3905975781746516564
+    second: PlayerCharacterWalkCycle_8
+  - first:
+      213: -3290470045135019885
+    second: PlayerCharacterWalkCycle_9
+  - first:
+      213: 5536155205321394271
+    second: PlayerCharacterWalkCycle_10
+  - first:
+      213: 9129742583037682778
+    second: PlayerCharacterWalkCycle_11
+  - first:
+      213: -1215199848488180011
+    second: PlayerCharacterWalkCycle_12
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -145,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a32413d620a450d46982d08308a5773e
+      spriteID: b180643c863fb834f94a294be730042f
       internalID: 21300000
       vertices: []
       indices: 
@@ -166,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cafac0ae8f0112a408f2fafec997ca8a
+      spriteID: ce95c55a82b914442a03e6fd9b2da11d
       internalID: 21300002
       vertices: []
       indices: 
@@ -187,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92e1438811489494d856640f24c0990f
+      spriteID: f87632aa78043cd4ebf1fc17f1fa9904
       internalID: 21300004
       vertices: []
       indices: 
@@ -208,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd27c2820af7a3448bd8e2687ba86fc2
+      spriteID: 47206891359afca4f9e8aed7e283344a
       internalID: 21300006
       vertices: []
       indices: 
@@ -229,50 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 354bb2f580ec1c54ca68f82e635bd391
+      spriteID: d405482a682bff04f9e9b9bb0cd136e1
       internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerCharacterWalkCycle_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a716b9d7afc75644e8a3174b1bc66a14
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerCharacterWalkCycle_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1468147cf50f03d4fb862c73d8ed5288
-      internalID: 21300012
       vertices: []
       indices: 
       edges: []

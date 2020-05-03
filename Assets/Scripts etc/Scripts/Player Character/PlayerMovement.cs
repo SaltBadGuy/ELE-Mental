@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Vector2 speed = new Vector2(1, 1);
+    public Vector2 speed;
+    public float speedMulti;
     public Vector2 LastMovementDir;
     public Vector2 movement;
     public Vector2 TestPos;
@@ -13,7 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public float InputX;
     public float InputY;
 
+    //Controls the amount of after images
+    public int AfterImageNum;
+
     public LayerMask MoveLMask;
+
+    public PlayerAnim PCA;
+    public PlayerShoot PSH;
+    public PlayerState PS;
 
     //Referring to the 2 different trees, VisRot is stuff affected by rotation and so on such as the character body, while StaHit is things like the character's hitbox where we don't want it to rotate necessarily.
     public GameObject VisRot;
@@ -23,38 +31,77 @@ public class PlayerMovement : MonoBehaviour
     //And we'll grab the movement hitbox too.
     public GameObject HBox;
 
-    //Either uses the standard 360 controller set up if true, will use keyboard and mouse if false
-    public bool Controller;
-
-    //sets an array that contains the last second of ticks
+    //Accepts a string for moving about. Currently supports keyboard and joysticks.
+    public string MoveControl;
     
     void Update()
     {
-        //Get Axis Information
-        if (Controller)
-        {
-            InputX = Input.GetAxis("L_XAxis_1");
-            InputY = Input.GetAxis("L_YAxis_1");
-        }
-        else
-        {
-            InputX = Input.GetAxis("Move_XAxis");
-            InputY = Input.GetAxis("Move_YAxis");
-        }
+        ChargeMoveBuff();
 
-        //Input is -1 to 1, so multiply it by some number
-        movement = new Vector2(
-          speed.x * InputX,
-          speed.y * InputY);
-
-        //If the position checks out, we can see this so that the game moves the character to its new pos.
-        NewPos = new Vector2(transform.position.x + movement.x, transform.position.y + movement.y);
-
+        GetMoveInput();
     }
 
     void FixedUpdate()
     {
-        //Moving the game object...
+        Movement();
+
+        Rotation();
+    }
+
+    void ChargeMoveBuff()
+    {
+        //Figure out how much faster the player character should be moving based on how much Charge it has. Also controls how many after images of the character appears.
+        if (PS.Charge > 99)
+        {
+            speedMulti = 2f;
+            AfterImageNum = 4;
+        }
+        else if (PS.Charge > 74)
+        {
+            speedMulti = 1.75f;
+            AfterImageNum = 4;
+        }
+        else if (PS.Charge > 49)
+        {
+            speedMulti = 1.5f;
+            AfterImageNum = 2;
+        }
+        else if (PS.Charge > 24)
+        {
+            speedMulti = 1.25f;
+            AfterImageNum = 1;
+        }
+    }
+
+    void GetMoveInput()
+    {
+        //Get Axis Information
+        if (MoveControl == "Controller")
+        {
+            InputX = Input.GetAxis("L_XAxis_1");
+            InputY = Input.GetAxis("L_YAxis_1");
+        }
+        else if (MoveControl == "Keyboard")
+        {
+            InputX = Input.GetAxis("Move_XAxis");
+            InputY = Input.GetAxis("Move_YAxis");
+        }
+        else
+        {
+            Debug.Log("something weird is being used for moving");
+        }
+
+        //Input is -1 to 1, so multiply it by our base speed value plus our speed multiplier (currently only effected by charge)
+        movement = new Vector2(
+          speed.x * InputX * speedMulti,
+          speed.y * InputY * speedMulti);
+
+        //we set a new potential position (ie. where the character would move to if there was no obstacles) The actual movement won't happen just yet, it gets checked in Movement().
+        NewPos = new Vector2(transform.position.x + movement.x, transform.position.y + movement.y);
+    }
+
+    void Movement()
+    {
         //Defaults to no movement. 
         Vector3 TestedNewPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
@@ -66,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         // Casts a ray in the direction the character wants to move to, checks if there'll be any collision at the end point
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), new Vector3(movement.x, movement.y, transform.position.z), Color.green, 0);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, NewPos, dis, MoveLMask);
-        
+
 
         //Checks if the ray actually hits anything at all
         if (hit.collider != null)
@@ -106,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
                     TestedNewPos.y = (hit.point.y);
                 }
                 //If neither of those were true, there's no change (ie. TestedNewPos.x == hit.point.X) and it doesn't matter.
-                
+
 
 
 
@@ -122,15 +169,21 @@ public class PlayerMovement : MonoBehaviour
             TestedNewPos = new Vector3(NewPos.x, NewPos.y, transform.position.z);
         }
 
-        //Set the rotation to match the actual direction our character is going
-        Vector2 look = new Vector2(InputX, InputY);
-        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
-        Legs.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
         //Finally, set the character's position.
         transform.position = new Vector3(TestedNewPos.x, TestedNewPos.y, transform.position.z);
+    }
 
+    void Rotation()
+    {
+        //We figure out which direction the legs should be going based on how our character attempts to move.
+        Vector2 look = new Vector2(InputX, InputY);
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
 
+        //We finally rotate the legs. If there's no input at all ie InputX and InputY equals 0, we just don't bother changing the rotation.
+        if (InputX != 0 || InputY != 0)
+        {
+            Legs.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)

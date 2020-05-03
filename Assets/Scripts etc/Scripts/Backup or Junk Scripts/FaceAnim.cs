@@ -21,10 +21,10 @@ public class FaceAnim : MonoBehaviour
     void Update()
     {
         //Grabs all the emotions from PlayerState and updates the animator variables.
-        FaceAnimCon.SetFloat("Boredom", PCS.Boredom);
-        FaceAnimCon.SetFloat("Anger", PCS.Anger);
-        FaceAnimCon.SetBool("Happy", PCS.Happy);
-        FaceAnimCon.SetBool("Hurt", PCS.Hurt);
+        FaceAnimCon.SetFloat("Boredom", PCS.AnBoredom);
+        FaceAnimCon.SetFloat("Anger", PCS.AnAnger);
+        FaceAnimCon.SetBool("Happy", PCS.AnHappy);
+        FaceAnimCon.SetBool("Hurt", PCS.AnHurt);
         
         //Counts down the blink timer.
         FaceAnimCon.SetFloat("BlinkF", FaceAnimCon.GetFloat("BlinkF") - 1);

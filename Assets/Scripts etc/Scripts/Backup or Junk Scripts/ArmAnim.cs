@@ -25,10 +25,10 @@ public class ArmAnim : MonoBehaviour
     void Update()
     {
         //Grabs all the emotions from PlayerState and updates the animator variables. Means if we want the arms to do something when the character is idle, happy etc. we can do that.
-        Anim.SetFloat("Boredom", PCS.Boredom);
-        Anim.SetFloat("Anger", PCS.Anger);
-        Anim.SetBool("Happy", PCS.Happy);
-        Anim.SetBool("Hurt", PCS.Hurt);
+        Anim.SetFloat("Boredom", PCS.AnBoredom);
+        Anim.SetFloat("Anger", PCS.AnAnger);
+        Anim.SetBool("Happy", PCS.AnHappy);
+        Anim.SetBool("Hurt", PCS.AnHurt);
 
         if (PCSH.StartFiring)
         {

@@ -70,7 +70,7 @@
     <Compile Include="Assets\Scripts etc\Scripts\Backup or Junk Scripts\FaceAnim.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Enemies\EnemyState.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Enemies\FindTarget.cs" />
-    <Compile Include="Assets\Scripts etc\Scripts\Player Character\PCAnim.cs" />
+    <Compile Include="Assets\Scripts etc\Scripts\Player Character\PlayerAnim.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Player Character\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Player Character\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Player Character\PlayerState.cs" />

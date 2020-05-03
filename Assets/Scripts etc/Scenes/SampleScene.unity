@@ -3901,10 +3901,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7647661293109456392, guid: 81149909ad33b5740b48b31350427213,
+    - target: {fileID: 7647661292936956214, guid: 81149909ad33b5740b48b31350427213,
         type: 3}
-      propertyPath: FaceAnimCon
-      value: 
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647661293626139292, guid: 81149909ad33b5740b48b31350427213,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81149909ad33b5740b48b31350427213, type: 3}

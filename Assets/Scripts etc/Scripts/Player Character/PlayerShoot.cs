@@ -7,7 +7,9 @@ public class PlayerShoot : MonoBehaviour
 
     public Camera mainCamera;
 
-    PlayerState PlayerState;
+    public PlayerAnim PCA;
+    public PlayerState PS;
+    public PlayerMovement PM;
 
     // keep track of the mouse position
     private Vector3 mousePosition;
@@ -37,12 +39,12 @@ public class PlayerShoot : MonoBehaviour
     public Vector2 look;
 
     //Either uses the standard 360 controller set up if true, will use keyboard and mouse if false
-    public bool Controller;
+    public string FireControl;
 
     // Use this for initialization
     void Start()
     {
-        PlayerState = GetComponent<PlayerState>();
+        PS = GetComponent<PlayerState>();
         //ProjSpawn = this.gameObject.GetComponentInChildren<Transform>().Find("ProjectileSpawn");
 
     }
@@ -51,23 +53,49 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
 
-        if (Controller)
+        if (FireControl == "Controller")
         {
             InputX = Input.GetAxis("R_XAxis_1");
             InputY = Input.GetAxis("R_YAxis_1");
-        }
-        else
-        {
-        }
 
-        if (InputX != 0 || InputY != 0)
+            //We start firing if any direction on the right stick is held
+            if (InputX != 0 || InputY != 0)
+            {
+                look = new Vector2(InputX, InputY);
+                StartFiring = true;
+            }
+            else
+            {
+                StartFiring = false;
+            }
+        }
+        else if (FireControl == "Mouse")
         {
-            look = new Vector2(InputX, InputY);
-            StartFiring = true;
+            //Get mouse input
+            mousePosition = Input.mousePosition;
+            mouseTarget = mainCamera.ScreenToWorldPoint(mousePosition);
+
+            //We also check if we're actually firing (with mouse, we check if left click is being used)
+            if (Input.GetMouseButton(0))
+            {
+                StartFiring = true;
+            }
+            else
+            {
+                StartFiring = false;
+            }
+
+            //Finally we set the mouse position
+            InputX = Input.mousePosition.x;
+            InputY = Input.mousePosition.y;
+        }
+        else if (FireControl == "Keyboard")
+        {
+
         }
         else
         {
-            StartFiring = false;
+            Debug.Log("something weird is being used for firing!");
         }
 
         if (FireCD > 0)
@@ -80,30 +108,40 @@ public class PlayerShoot : MonoBehaviour
         {
             if (StartFiring)
             {
-                if (PlayerState.Anger < 100)
+
+                //While the character is being told to fire, our character's Anger stat goes up, which affects some of the character's animations. 
+                if (PS.AnAnger < 100)
                 {
-                    PlayerState.Anger++;
+                    PS.AnAnger++;
                 }
-                PlayerState.Boredom = 0;
+                //The character's boredom is set to 0 to prevent it from playing certain idle animations while fighting off enemies
+                PS.AnBoredom = 0;
+                
+
+                //Currently only the fire element is implemented properly
                 if (FireCD <= 0)
                 {
                     if (GetComponent<PlayerState>().ElementEquipped == "Fire")
                     {
-                        FireCD = RateOfFire;
-                        GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
-                        Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
-                        //Projectile.GetComponent<Bullet>().DamageDealt = DamageDealt;
-                        Destroy(Projectile, 5f);
+                        FireAttack();
                     }
                     else if (GetComponent<PlayerState>().ElementEquipped == "Water")
                     {
-                        FireCD = RateOfFire;
-                        GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
-                        Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
-                        GameObject WandSparkObj = Instantiate(ProjSpark, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
-                        WandSparkObj.GetComponent<PartTrack>().TargetObj = ProjSpawn;
-                        //Projectile.GetComponent<Bullet>().DamageDealt = DamageDealt;
-                        Destroy(Projectile, 5f);
+                        //If we don't have full charge yet, the player character just does a normal attack
+                        if (PS.Charge < 100)
+                        {
+                            FireCD = RateOfFire;
+                            GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
+                            Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
+                            GameObject WandSparkObj = Instantiate(ProjSpark, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
+                            WandSparkObj.GetComponent<PartTrack>().TargetObj = ProjSpawn;
+                            Destroy(Projectile, 5f);
+                        }
+                        //If our character is fully charged, then we perform the charged attack
+                        else
+                        {
+                            Debug.Log("Character has done a big charge shot!");
+                        }
                     }
                     else if (GetComponent<PlayerState>().ElementEquipped == "Earth")
                     {
@@ -145,23 +183,64 @@ public class PlayerShoot : MonoBehaviour
                         //Projectile.GetComponent<Rigidbody2D>().velocity = transform.forward * 100; //heading * 0.075f;
                         Projectile.GetComponent<Rigidbody2D>().AddForce(transform.forward * 20);
                         Destroy(Projectile, 5f);
+                        GameObject WandSparkObj = Instantiate(ProjSpark, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
+                        WandSparkObj.GetComponent<PartTrack>().TargetObj = ProjSpawn;
                     }
+                    //The character also loses all Charge, resetting its movement speed to normal and meaning the character has to wait before getting a fully charged shot (again).
+                    PS.Charge = 0;
                 }
             }
             else
             {
-                if (PlayerState.Anger > -1)
+                if (PS.AnAnger > -1)
                 {
-                    PlayerState.Anger--;
+                    PS.AnAnger--;
                 }
             }
         }        
     }
 
+    void FireAttack()
+    {
+        //If we don't have full charge yet, the player character just does a normal attack
+        if (PS.Charge < 100)
+        {
+            FireCD = RateOfFire;
+            GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
+            Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
+            Destroy(Projectile, 5f);
+        }
+        //If our character is fully charged, then we perform the charged attack (NOT FINISHED YET, ONLY DIFFERENCE IS SCALE JUST TO CLEARLY SHOW CHARGE SYSTEM WORKING)
+        else
+        {
+            FireCD = RateOfFire;
+            GameObject Projectile = Instantiate(FireBlast, ProjSpawn.transform.position, ProjSpawn.transform.rotation);
+            Projectile.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+            Projectile.transform.position = new Vector3(Projectile.transform.position.x, Projectile.transform.position.y, -1);
+            Destroy(Projectile, 5f);
+        }
+    }
+
     void FixedUpdate()
     {
-        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
-        VisRot.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
+        if (FireControl == "Controller")
+        {
+            //Rotates relevant VisRot components (anything that isn't legs) to face where the character is aiming
+            float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
+            VisRot.transform.Find("Arms").transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            VisRot.transform.Find("Body").transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            VisRot.transform.Find("Face").transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        else if (FireControl == "Mouse") {
+            //Rotates relevant VisRot components (anything that isn't legs) to face where the mouse is pointing (small hack to offset by 90 degrees)
+            VisRot.transform.Find("Arms").transform.rotation = Quaternion.LookRotation(Vector3.forward, mouseTarget - transform.position);
+            VisRot.transform.Find("Arms").transform.rotation *= Quaternion.Euler(0, 0, 90);
+            VisRot.transform.Find("Body").transform.rotation = Quaternion.LookRotation(Vector3.forward, mouseTarget - transform.position);
+            VisRot.transform.Find("Body").transform.rotation *= Quaternion.Euler(0, 0, 90);
+            VisRot.transform.Find("Face").transform.rotation = Quaternion.LookRotation(Vector3.forward, mouseTarget - transform.position);
+            VisRot.transform.Find("Face").transform.rotation *= Quaternion.Euler(0, 0, 90);
+        }  
     }
 }
 
