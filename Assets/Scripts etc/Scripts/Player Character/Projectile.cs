@@ -7,6 +7,26 @@ public class Projectile : MonoBehaviour
     public float DamageDealt;
     public float ProjVel;
 
+    //Spin is used for splinters, simply cosmetic. Spinsign is set to either +1 or -1, effectively randomizing if it'll spin clockwise/counterclockwise
+    public bool Spin;
+    public int SpinSign;
+
+    //SelfDesB tells us if the projectile has a fixed life. we eventually want all projectiles to disappear after a fixed time, either for gameplay/balance reasons and/or to prevent the fireball escaping the play area and travelling forever.
+    //SelfDesB == true: Regular behaviour, the projectile must expire a SelfDesF amount of seconds after spawning.
+    //SelfDesB == false; This is for when projectiles have been spawned but aren't to be used yet. Earth projectiles can be held by the player, and we don't want it to expire before the player even throws it. 
+    //Once the projectile becomes active, it'll always be told to self-destruct after SelfDesF.
+
+    public bool SelfDesB;
+    public bool SelfDesDone;
+    public float SelfDesF;
+
+    //Bools used for player earth projectiles, the projectiles do not have hitboxes or expire while not fired yet. If not active, they'll follow a parent object around. Most projectiles are active by default. 
+    //The parent information is held so we know who cast the projectile. The spawn parent is to get the exact spawn object it came from (mostly for debugging player earth projectiles.
+    public bool Active;
+    public int NoOfHits;
+    public Transform SpawnParent;
+    public Transform Parent;
+
     //Variables associated with the smoke trail and its spawn rate
     public GameObject SmokeTrail;
     public float SmokeTrailF;
@@ -19,65 +39,131 @@ public class Projectile : MonoBehaviour
     public float EmberTrailCDMin;
     public float EmberTrailCDMax;
 
-    public Vector3 GiveDir;
-
     public GameObject Explosion;
+
+    //Used for Earth projectiles.
+    public GameObject Splinter;
+    public int SplinterCount;
+    public int CanSplinter = 1;
+
 
     // Use this for initialization
     void Start()
     {
+        int[] SpinSignCandidates = new int[] { -1, 1};
+        SpinSign = SpinSignCandidates[Random.Range(0, SpinSignCandidates.Length)];
         SmokeTrailF = Random.Range(SmokeTrailCDMin, SmokeTrailCDMax);
         EmberTrailF = Random.Range(EmberTrailCDMin, EmberTrailCDMax);
-        //GiveDir = Quaternion.Euler(new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z));// * transform.forward;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += (transform.right * ProjVel) * Time.deltaTime;
 
-        //Checks if Smoke Trail is off Cooldown and if so will Spawn Smoke, otherwise decrements SmokeTrailF each step.
-        if (SmokeTrailF <= 0)
+        if (!SelfDesDone)
         {
-            SpawnSmoke();
-        }
-        else
-        {
-            SmokeTrailF--;
+            if (SelfDesB)
+            {
+                SelfDestruct(SelfDesF);
+                SelfDesDone = true;
+            }
         }
 
-        if (EmberTrailF <= 0)
+        if (Active)
         {
-            SpawnEmber();
+            SelfDesB = true;
+
+            transform.position += (transform.right * ProjVel) * Time.deltaTime;
+            if (Spin)
+            {
+                transform.GetChild(0).rotation *= Quaternion.Euler(0, 0, 30 * SpinSign);
+            }
+
+            GetComponent<BoxCollider2D>().enabled = true;
+
+            //Checks if Smoke Trail is off Cooldown and if so will Spawn Smoke, otherwise decrements SmokeTrailF each step.
+            if (SmokeTrailF <= 0)
+            {
+                SpawnSmoke();
+            }
+            else
+            {
+                SmokeTrailF--;
+            }
+
+            if (EmberTrailF <= 0)
+            {
+                SpawnEmber();
+            }
+            else
+            {
+                EmberTrailF--;
+            }
         }
+        //For Earth projectiles, this keeps the projectile behind the player while it's prepared but not fired yet.
         else
         {
-            EmberTrailF--;
+            transform.position = SpawnParent.position;
+            transform.rotation = SpawnParent.rotation;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Colliding with " + col.gameObject.name);
-        GameObject Explos = Instantiate(Explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
-    }
-
-    /*
-        void OnTriggerEnter2D(Collider2D col)
-    {
-        //Debug.Log("Hitting with a PC Fireball!");
-        Vector2 average = Vector2.zero;
-
-        if (col.gameObject.name.Contains("Enemy"))
+        //Debug.Log("Colliding with " + col.gameObject.name);
+        if (Active)
         {
-            Debug.Log("Hitting " + col.gameObject.name + " with a PC Fireball!");
-            col.gameObject.GetComponent<EnemyState>().TakeDamage(DamageDealt);//, new Vector3(HitPoint.x, HitPoint.y, col.gameObject.transform.position.z));
-            
+            GameObject Explos = Instantiate(Explosion, transform.position, transform.rotation);
+
+            //If this hits something that isn't a wall (ie. an enemy), we check if it casts splinters, continues for more hits or simply blows up
+            if (col.tag != "Wall")
+            {
+                if (CanSplinter > 0)
+                {
+                    SplinterSpawn();
+                }
+
+                if (NoOfHits > 0)
+                {
+                    NoOfHits--;
+                }
+                if (NoOfHits == 0)
+                {
+                    Active = false;
+                    SelfDestruct(0);
+                }
+            }
+            else
+            {
+                Active = false;
+                SelfDestruct(0);
+            }
         }
     }
-    */
+
+    void SplinterSpawn()
+    {
+
+        float BaseOffSetRot = 30;
+
+
+        for (int i = -Mathf.FloorToInt(SplinterCount/2); i < Mathf.FloorToInt(SplinterCount/2) + 1; i++)
+        {
+            
+            float OffSetRot;
+            OffSetRot = 360 + (BaseOffSetRot * i);
+            //If we go over 360 degrees we simply take away 360 again and get the absolute value (effectively, we can go from 30 to 15 to 0 to 345 to 330 by taking away 15 each time).
+            if (OffSetRot > 360)
+            {
+                Mathf.Floor(OffSetRot -= 360);
+            }
+            Debug.Log("Splinter i is " + i + ", OffSetRot is " + OffSetRot);
+            GameObject Proj = Instantiate(Splinter, transform.position, transform.rotation * Quaternion.Euler(0, 0, -OffSetRot));
+            Proj.GetComponent<Projectile>().CanSplinter = CanSplinter - 1;
+        }
+    }
 
     void SpawnSmoke()
     {
@@ -99,23 +185,10 @@ public class Projectile : MonoBehaviour
         Ember.transform.position = new Vector3(Ember.transform.position.x, Ember.transform.position.y, -1);
     }
 
-    /*
-    foreach (ContactPoint2D BlastHit in col.contacts)
+    void SelfDestruct(float f)
     {
-        average += BlastHit.point;
+        //SpawnParent.GetComponent<PrjSpawn>().Child = null;
+        Destroy(gameObject, f);
     }
-    Vector2 HitPoint = average / col.contacts.Length;
-    if (col.gameObject.name == "Grunt(Clone)")
-    {
-        Debug.Log("Hitting " + col.gameObject.name + " with a energy blast!");
-        //col.gameObject.GetComponent<EnemyState>().TakeDamage(DamageDealt, new Vector3(HitPoint.x, HitPoint.y, col.gameObject.transform.position.z));
-        Destroy(gameObject);
-    }
-    else if (col.gameObject.name == "Bearer(Clone)")
-    {
-        Debug.Log("Hitting " + col.gameObject.name + " with a energy blast!");
-        //col.gameObject.GetComponent<EnemyState>().TakeDamage(DamageDealt, new Vector3(HitPoint.x, HitPoint.y, col.gameObject.transform.position.z));
-        Destroy(gameObject);
-    }
-    */
+    
 }

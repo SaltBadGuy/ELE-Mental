@@ -53,23 +53,28 @@ public class PlayerMovement : MonoBehaviour
         //Figure out how much faster the player character should be moving based on how much Charge it has. Also controls how many after images of the character appears.
         if (PS.Charge > 99)
         {
-            speedMulti = 2f;
+            speedMulti = 1.5f;
             AfterImageNum = 4;
         }
         else if (PS.Charge > 74)
         {
-            speedMulti = 1.75f;
-            AfterImageNum = 4;
+            speedMulti = 1.375f;
+            AfterImageNum = 3;
         }
         else if (PS.Charge > 49)
         {
-            speedMulti = 1.5f;
+            speedMulti = 1.25f;
             AfterImageNum = 2;
         }
         else if (PS.Charge > 24)
         {
-            speedMulti = 1.25f;
+            speedMulti = 1.125f;
             AfterImageNum = 1;
+        }
+        else
+        {
+            speedMulti = 1f;
+            AfterImageNum = 0;
         }
     }
 

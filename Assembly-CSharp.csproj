@@ -66,6 +66,7 @@
     <Compile Include="Assets\AnimEffects.cs" />
     <Compile Include="Assets\AnimEndDes.cs" />
     <Compile Include="Assets\PartTrack.cs" />
+    <Compile Include="Assets\PrjSpawn.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Backup or Junk Scripts\ArmAnim.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Backup or Junk Scripts\FaceAnim.cs" />
     <Compile Include="Assets\Scripts etc\Scripts\Enemies\EnemyState.cs" />

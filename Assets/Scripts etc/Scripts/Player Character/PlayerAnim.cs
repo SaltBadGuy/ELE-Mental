@@ -109,7 +109,7 @@ public class PlayerAnim : MonoBehaviour
         //Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), new Vector3(-PCSH.InputX + 0.5f, -PCSH.InputY + 0.5f, transform.position.z).normalized, Color.magenta, 0);
 
         //Debug.Log(Mathf.Atan2(-PCSH.InputY - PCM.InputY, -PCSH.InputX - PCM.InputX) * 180 / Mathf.PI);
-        Debug.Log((new Vector2(PCM.InputX, PCM.InputY), new Vector2(PCSH.InputX, PCSH.InputY)));
+        //Debug.Log((new Vector2(PCM.InputX, PCM.InputY), new Vector2(PCSH.InputX, PCSH.InputY)));
                        
     }
 
