@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
 
     public Camera mainCamera;
 
-    public PlayerAnim PCA;
+    public PlayerAnim PA;
     public PlayerState PS;
     public PlayerMovement PM;
 
@@ -62,8 +62,15 @@ public class PlayerShoot : MonoBehaviour
 
     public Vector2 look;
 
+    public LayerMask EnemyLMask;
+
     //Either uses the standard 360 controller set up if true, will use keyboard and mouse if false
     public string FireControl;
+
+    void Start()
+    {
+        mainCamera = Camera.main;
+    }
 
     void Update()
     {
@@ -234,6 +241,7 @@ public class PlayerShoot : MonoBehaviour
        //If we don't have full charge yet, the player character just does a normal attack
        if (PS.Charge < 100)
        {
+           PA.Anim.Play("Normal Fire Attack");
            AttCD = FireROF;
            GameObject Proj = Instantiate(NorFireAtt, NorFireAttSpawn.transform.position, NorFireAttSpawn.transform.rotation);
            Proj.transform.position = new Vector3(Proj.transform.position.x, Proj.transform.position.y, -1);
@@ -242,8 +250,9 @@ public class PlayerShoot : MonoBehaviour
        //If our character is fully charged, then we perform the charged attack (NOT FINISHED YET, ONLY DIFFERENCE IS SCALE JUST TO CLEARLY SHOW CHARGE SYSTEM WORKING)
        else
        {
+           PA.Anim.Play("Charged Fire Attack");
            AttCD = FireROF;
-           GameObject Proj = Instantiate(ChaFireAtt, NorFireAttSpawn.transform.position, NorFireAttSpawn.transform.rotation);
+           GameObject Proj = Instantiate(ChaFireAtt, ChaFireAttSpawn.transform.position, ChaFireAttSpawn.transform.rotation);
            Proj.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
            Proj.transform.position = new Vector3(Proj.transform.position.x, Proj.transform.position.y, -1);
            Proj.GetComponent<Projectile>().Parent = this.transform;
@@ -288,7 +297,7 @@ public class PlayerShoot : MonoBehaviour
        else
        {
            AttCD = WaterROF;
-           GameObject Proj = Instantiate(ChaWaterAtt, NorWaterAttSpawn.transform.position, NorWaterAttSpawn.transform.rotation);
+           GameObject Proj = Instantiate(ChaWaterAtt, ChaWaterAttSpawn.transform.position, ChaWaterAttSpawn.transform.rotation);
            Proj.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
            Proj.transform.position = new Vector3(Proj.transform.position.x, Proj.transform.position.y, -1);
            Proj.GetComponent<Projectile>().Parent = transform;
@@ -297,7 +306,21 @@ public class PlayerShoot : MonoBehaviour
 
     void LightningAttack()
     {
-
+        if (PS.Charge < 100)
+        {
+            AttCD = FireROF;
+            Debug.DrawRay(new Vector3(NorLightningAttSpawn.position.x, NorLightningAttSpawn.position.y, NorLightningAttSpawn.position.z), NorFireAttSpawn.transform.up, Color.green, 1);
+            RaycastHit2D hit = Physics2D.Raycast(NorLightningAttSpawn.position, NorFireAttSpawn.transform.up, EnemyLMask);
+        }
+        //If our character is fully charged, then we perform the charged attack (NOT FINISHED YET, ONLY DIFFERENCE IS SCALE JUST TO CLEARLY SHOW CHARGE SYSTEM WORKING)
+        else
+        {
+            AttCD = FireROF;
+            GameObject Proj = Instantiate(ChaFireAtt, NorFireAttSpawn.transform.position, NorFireAttSpawn.transform.rotation);
+            Proj.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+            Proj.transform.position = new Vector3(Proj.transform.position.x, Proj.transform.position.y, -1);
+            Proj.GetComponent<Projectile>().Parent = this.transform;
+        }
     }
 }
 

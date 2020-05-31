@@ -24,9 +24,18 @@ public class PlayerState : MonoBehaviour
     public int EleIndex;
 
     //Objs and arrays for the player's aura.
+    public GameObject Aura;
+
     public GameObject AuraCircle;
+    public GameObject[] AuraObjArr;
+
+    public Sprite FireCircle;
+    public Sprite EarthCircle;
+    public Sprite LightningCircle;
+    public Sprite WaterCircle;
+    public Sprite[] AuraCircleSprArr;
+
     public GameObject AuraIcon;
-    public GameObject[] AuraIconObjArr;
 
     public Sprite FireIcon;
     public Sprite EarthIcon;
@@ -34,56 +43,34 @@ public class PlayerState : MonoBehaviour
     public Sprite WaterIcon;
     public Sprite[] AuraIconSprArr;
 
+    //Used to control how many earth projectiles the player can hold at full charge.
     public int EarthSize;
     public GameObject EarthPivot;
     public GameObject EarthPrjSpawn;
     public GameObject[] EarthPrjSpawnArr;
 
     public PlayerShoot PSH;
-    public GameObject Aura;
+    public PlayerMovement PM;
+
 
     // Use this for initialization
     void Start()
     {
-        EleIndex = 0;
+        AuraCircleSprArr = new Sprite[] { FireCircle, EarthCircle, LightningCircle, WaterCircle };
         AuraIconSprArr = new Sprite[] { FireIcon, EarthIcon, LightningIcon, WaterIcon };
-        AuraIconObjArr = new GameObject[5];
+        AuraObjArr = new GameObject[5];
         SetUpEarth();
-        SetUpAura();
-        
+        SetUpAura();       
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
-
-        //AuraUpdate();
-
-        AnimUpdate();
-
-        ChargeUpdate();
-
-        //Cycles through elements as a debug tool, currently only flicks between fire and earth but will eventually correctly cycle through the array/list
-        if (Input.GetKeyDown("space"))
-        {
-            EleIndex = CycleThruList(EleIndex, ElementEquippedList);
-            ElementEquipped = ElementEquippedList[EleIndex];
-        }
-
-    }
-
 
     void SetUpAura()
     {
-        for (int i = 0; i < AuraIconObjArr.Length; i++)
+        for (int i = 0; i < AuraObjArr.Length; i++)
         {
 
-            float OffSet = 0.16f;
+            float OffSet = 0.2f;
 
-            int mod;           
+            int mod;
 
             if (i / 2f <= 1f)
             {
@@ -94,39 +81,39 @@ public class PlayerState : MonoBehaviour
                 mod = -1;
             }
 
-            Debug.Log("i is " + i + ", AuraIconObjArr.Length is " + AuraIconSprArr.Length + ", mod is " + mod);
+            //Debug.Log("i is " + i + ", AuraIconObjArr.Length is " + AuraIconSprArr.Length + ", mod is " + mod);
 
             //We spawn in the base circle of the aura under i = 0
             if (i == 0)
             {
-                AuraIconObjArr[i] = Instantiate(AuraCircle, new Vector3(transform.position.x,
+                AuraObjArr[i] = Instantiate(AuraCircle, new Vector3(transform.position.x,
                 transform.position.y,
-                transform.position.z),
+                transform.position.z + 2),
                 Aura.transform.rotation,
                 Aura.transform);
-                AuraIconObjArr[i].name = "AuraCircle";
+                AuraObjArr[i].name = "AuraCircle";
             }
             //We split up our odd and even icons so they can be placed on the 4 sides of the player
             else if (i % 2 == 0)
             {
-                AuraIconObjArr[i] = Instantiate(AuraIcon, new Vector3(transform.position.x + OffSet * mod,
+                AuraObjArr[i] = Instantiate(AuraIcon, new Vector3(transform.position.x + OffSet * mod,
                 transform.position.y,
                 Aura.transform.position.z - 1),
-                Aura.transform.rotation,
+                Quaternion.Euler(0,0, Aura.transform.rotation.z - 90 * (i - 1)),
                 Aura.transform);
-                AuraIconObjArr[i].transform.localScale = new Vector3(0.25f, 0.25f, AuraIconObjArr[i].transform.localScale.z);
-                AuraIconObjArr[i].name = "AuraIcon " + i;
+                AuraObjArr[i].transform.localScale = new Vector3(0.25f, 0.25f, AuraObjArr[i].transform.localScale.z);
+                AuraObjArr[i].name = "AuraIcon " + i;
             }
             else
             {
-                AuraIconObjArr[i] = Instantiate(AuraIcon, new Vector3(transform.position.x,
+                AuraObjArr[i] = Instantiate(AuraIcon, new Vector3(transform.position.x,
                 transform.position.y + OffSet * mod,
                 Aura.transform.position.z - 1),
-                Aura.transform.rotation,
+                Quaternion.Euler(0, 0, Aura.transform.rotation.z - 90 * (i - 1)),
                 Aura.transform);
-                AuraIconObjArr[i].transform.localScale = new Vector3(0.25f, 0.25f, AuraIconObjArr[i].transform.localScale.z);
-                AuraIconObjArr[i].name = "AuraIcon " + i;
-            }          
+                AuraObjArr[i].transform.localScale = new Vector3(0.25f, 0.25f, AuraObjArr[i].transform.localScale.z);
+                AuraObjArr[i].name = "AuraIcon " + i;
+            }
         }
     }
 
@@ -185,33 +172,77 @@ public class PlayerState : MonoBehaviour
             }
 
             //This is the regular offset that each pair that isn't pair 1 is affected by.
-            Debug.Log("i is " + i + ", PairCount is " + PairCount);
+            //Debug.Log("i is " + i + ", PairCount is " + PairCount);
 
-             /*Debug.Log("i is " + i + ", BaseXUnit is " + BaseXUnit + ", MaxX is " + MaxX + ", PairCount is " + PairCount + ", BaseOffSetX is " + BaseOffSetX + 
-                 ", EarthPivot's local position is " + EarthPivot.transform.localPosition + ", " +
-                 "The vector before mods is " + transform.position.x + EarthPivot.transform.localPosition.x);*/
+            EarthPrjSpawnArr[i] = Instantiate(EarthPrjSpawn, new Vector3(transform.position.x + EarthPivot.transform.localPosition.x - MaxX + OffSetX,
+               transform.position.y + EarthPivot.transform.localPosition.y + OffSetY,
+               EarthPivot.transform.position.z),
+               Quaternion.Euler(0, 0, OffSetRot),
+               EarthPivot.transform);
 
-             //transform.position.x + EarthPivot.transform.localPosition.x - MaxX + InitOffSetX + (OffSetX * PairCount)
-
-             EarthPrjSpawnArr[i] = Instantiate(EarthPrjSpawn, new Vector3(transform.position.x + EarthPivot.transform.localPosition.x - MaxX + OffSetX,
-                transform.position.y + EarthPivot.transform.localPosition.y + OffSetY, 
-                EarthPivot.transform.position.z), 
-                Quaternion.Euler(0, 0, OffSetRot), 
-                EarthPivot.transform);
-
-            EarthPrjSpawnArr[i].name = "EarthPrjSpawn " + i; 
+            EarthPrjSpawnArr[i].name = "EarthPrjSpawn " + i;
         }
-        
+
     }
 
-    public void TakeDamage(float DamageTaken)//, Vector3 Impact)
+    // Update is called once per frame
+    void Update()
     {
-        //gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(Impact * 5);
-        //CurHP -= DamageTaken;
-        //DrawText(DamageTaken.ToString(), "Damage");
-        //Debug.Log(gameObject.name + " took " + DamageTaken + " damage, leaving it at " + CurHP + "HP!");
-        AnHurt = true;
-        HurtCD = 200;
+        
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+
+        //Cycles through elements as a debug tool, currently only flicks between fire and earth but will eventually correctly cycle through the array/list
+        if (Input.GetKeyDown("space"))
+        {
+            EleIndex = CycleThruStringList(EleIndex, ElementEquippedList);
+            ElementEquipped = ElementEquippedList[EleIndex];
+        }
+
+        if (Input.GetKeyDown("c"))
+        {
+            if (PSH.FireControl == "Mouse")
+            {
+                PSH.FireControl = "Controller";
+                PM.MoveControl = "Controller";
+            }
+            else
+            {
+                PSH.FireControl = "Mouse";
+                PM.MoveControl = "Keyboard";
+            }
+        }
+
+        ElementCheck();
+
+        AuraUpdate();
+
+        AnimUpdate();
+
+        ChargeUpdate();
+    }
+
+    void ElementCheck()
+    {
+        EleIndex = FindInStringList(ElementEquipped, ElementEquippedList);
+    }
+
+    void AuraUpdate()
+    {
+
+        for (int i = 0; i < AuraObjArr.Length; i++)
+        {
+            if (i == 0)
+            {
+                AuraObjArr[i].GetComponent<SpriteRenderer>().sprite = AuraCircleSprArr[EleIndex];
+                AuraObjArr[i].transform.localScale = new Vector3(0.01f * Charge, 0.01f * Charge, 1f);
+
+            }
+            else
+            {
+                AuraObjArr[i].GetComponent<SpriteRenderer>().sprite = AuraIconSprArr[EleIndex];
+                AuraObjArr[i].transform.localScale = new Vector3((0.01f * Charge) / 5, (0.01f * Charge) / 5, 1f);
+            }
+        }
     }
 
     void AnimUpdate()
@@ -239,95 +270,6 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    //This code needs updated, it's far too messy.
-    void AuraUpdate()
-    {
-        /*
-        switch (ElementEquipped){
-            case "Fire":
-
-                //We change the colour of the ring. We then change its transparency 
-                Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color = new Color(1,0,0, 192 * Charge);
-
-                Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().sprite = FireIcon;
-                Aura.transform.Find("Icon 1").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().sprite = FireIcon;
-                Aura.transform.Find("Icon 2").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().sprite = FireIcon;
-                Aura.transform.Find("Icon 3").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().sprite = FireIcon;
-                Aura.transform.Find("Icon 1").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                //The size also scales
-                Aura.transform.localScale = new Vector3(0.0125f * Charge, 0.0125f * Charge, 0.0125f * Charge);
-                break;
-            case "Earth":
-                Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color = new Color(0,1,0,0.5f);
-                Aura.transform.Find("Circle").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().sprite = EarthIcon;
-                Aura.transform.Find("Icon 1").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 1").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().sprite = EarthIcon;
-                Aura.transform.Find("Icon 2").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 2").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().sprite = EarthIcon;
-                Aura.transform.Find("Icon 3").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 3").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().sprite = EarthIcon;
-                Aura.transform.Find("Icon 1").transform.GetComponent<SpriteRenderer>().color = new Color
-                    (Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().color.r,
-                    Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().color.g,
-                    Aura.transform.Find("Icon 4").GetComponent<SpriteRenderer>().color.b,
-                    192 * Charge);
-
-                Aura.transform.localScale = new Vector3(0.0125f * Charge, 0.0125f * Charge, 0.0125f * Charge);
-
-                break;
-            case "Water":
-                Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color = new Color(0,0,1,0.5f);
-                break;
-            case "Lightning":
-                Aura.transform.Find("Circle").GetComponent<SpriteRenderer>().color = new Color(0, 1, 1, 0.5f);
-                break;
-        }*/
-    }
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Wall")
@@ -336,7 +278,17 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    int CycleThruList(int i, List<string> IncList) {
+    public void TakeDamage(float DamageTaken)//, Vector3 Impact)
+    {
+        //gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(Impact * 5);
+        //CurHP -= DamageTaken;
+        //DrawText(DamageTaken.ToString(), "Damage");
+        //Debug.Log(gameObject.name + " took " + DamageTaken + " damage, leaving it at " + CurHP + "HP!");
+        AnHurt = true;
+        HurtCD = 200;
+    }
+
+    int CycleThruStringList(int i, List<string> IncList) {
 
         if (i == IncList.Capacity - 1)
         {
@@ -348,5 +300,17 @@ public class PlayerState : MonoBehaviour
             i++;
             return i;
         }
+    }
+    
+    int FindInStringList(string Test, List<string> IncList)
+    {
+        for (int i = 0; i < IncList.Capacity; i++)
+        {
+            if (Test == IncList[i])
+            {
+                return i;
+            }
+        }
+        return -1;            
     }
 }
