@@ -918,7 +918,7 @@ MonoBehaviour:
   PM: {fileID: 7647661291921583109}
   StartFiring: 0
   DamageDealt: 0
-  FireROF: 30
+  FireROF: 10
   WaterROF: 5
   EarthROF: 60
   LightningROF: 45
